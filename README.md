@@ -18,9 +18,17 @@ Our vision is to support crypto transactions for a quite number of cryptocurrenc
 
 ### API ENDPOINTS(supported)
 
-* Create btc transaction: ```BASE_URL/api/gateway/btc/tx/create```
+* Create btc transaction: ```BASE_URL/api/gateway/btc/transaction/create```
 
-* Sign && broadcast btc transaction : ```BASE_URL/api/gateway/btc/tx/sign```
+* Sign btc transaction : ```BASE_URL/api/gateway/btc/transaction/sign```
+
+* Push btc transaction : ```BASE_URL/api/gateway/btc/transaction/push```
+
+* Decode btc transaction : ```BASE_URL/api/gateway/btc/transaction/decode```
+
+* Witness btc transaction : ```BASE_URL/api/gateway/btc/transaction/witness```
+
+* Propagate btc transaction : ```BASE_URL/api/gateway/btc/transaction/propagate```
 
 ### REQUEST BODY(supported)
 
@@ -31,9 +39,26 @@ Our vision is to support crypto transactions for a quite number of cryptocurrenc
   }```
 
 * Sign btc __transaction__ **body**:``` {
+      transaction:'',
       toSign:'',
+      signatures:'',
+      pubkeys:'',
   }```
-
+  
+*  ``` E.g transaction: 01000000025ff77c38a1b07ec6a09eee200f5b6f8df98f601d6ec9922cd36b6baf834380ed010000001976a9141944c4c00c133e1fa33c29d8800c3b4ed0d2c56188acffffffff54e1e83f65d2f69865bb787e79da26246bb4c42effec4892a57aecaf029682420100000000ffffffff02102700000000000017a91473d32ac9e4330a071ee1b3a9ccf3997bdd4174d08797291300000000001976a9141944c4c00c133e1fa33c29d8800c3b4ed0d2c56188ac0000000001000000```
+   
+* Decode btc __transaction__ **body**:``` {
+  transaction:'',
+      }```
+* Push btc __transaction__ **body**:``` {
+  transaction:'',
+      }```
+* Witness btc __transaction__ **body**:``` {
+  transaction:'',
+      }``` 
+* Propagate btc __transaction__ **body**:``` {
+  transaction:'',
+      }```  
 ### RESPONSE STATUS CODES
 
 * Successful request: 200
@@ -50,7 +75,7 @@ Our vision is to support crypto transactions for a quite number of cryptocurrenc
 > modals
     . TransactionsModal.java
 > services
-    . BlockCypherService.java
+    . BtcTransactionService.java
 > utils
     > encryption
         . HashData.java
