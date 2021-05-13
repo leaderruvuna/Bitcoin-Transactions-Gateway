@@ -7,7 +7,7 @@ public class TransactionsModal {
 
     private String inputAddress;
     private String outputAddress;
-    private double amount;
+    private long amount;
     private String toSign;
 
     public String getInputAddress() {
@@ -26,11 +26,11 @@ public class TransactionsModal {
         this.outputAddress = outputAddress;
     }
 
-    public double getAmount() {
+    public long getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(long amount) {
         this.amount = amount;
     }
 
