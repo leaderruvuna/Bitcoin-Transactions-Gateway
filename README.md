@@ -1,6 +1,6 @@
 
 
-## BTC TX  GATEWAY API DOCS
+## 📚 BTC TX  GATEWAY API DOCS
 
 ### About the BTC GATEWAY
 
@@ -30,6 +30,7 @@ Our vision is to support crypto transactions for a quite number of cryptocurrenc
 
 * Propagate btc transaction : ```BASE_URL/api/gateway/btc/transaction/propagate```
 
+
 ### REQUEST BODY(supported)
 
 * Create btc __transaction__ **body**: ```{
@@ -58,13 +59,18 @@ Our vision is to support crypto transactions for a quite number of cryptocurrenc
       }``` 
 * Propagate btc __transaction__ **body**:``` {
   transaction:'',
-      }```  
+      }``` 
+
+
+<img src="./screens/create-transaction.png" alt="Postman Result" />
+
+
 ### RESPONSE STATUS CODES
 
-* Successful request: 200
-* Forbidden data: 403
-* Unauthorized request: 401
-* Bad request: 400
+* ```Successful request: 200```
+* ```Forbidden data: 403```
+* ```Unauthorized request: 401```
+* ```Bad request: 400```
 
 ### APPLICATION FOLDER STRUCTURE
 ```
