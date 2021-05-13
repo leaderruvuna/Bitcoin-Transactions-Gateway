@@ -1,12 +1,11 @@
 package com.btcapi.demo.utils.validators;
 
-import com.btcapi.demo.modals.TransactionsModal;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BtcTransactionInputsValidator {
 
-    public boolean isTransInputsCreation(String fromAddress,String toAddress, double amount) {
+    public boolean isTransInputsCreation(String fromAddress, String toAddress, long amount) {
 
         if (fromAddress.isEmpty() || toAddress.isEmpty() || amount == 0) {
             return false;

@@ -10,6 +10,7 @@ import sun.net.www.http.HttpClient;
 
 import java.io.IOException;
 
+
 @Component
 public class BtcTransactionService {
 
@@ -48,7 +49,7 @@ public class BtcTransactionService {
 
     @Async
     //Create transaction
-    public Object txCreation(String inputAddress, String outputAddress, double amount) throws IOException {
+    public Object txCreation(String inputAddress, String outputAddress, long amount) throws IOException {
         String transactionsReqData =
                 "{\"inputs\":" +
                         "[{\"addresses\":[\"" + inputAddress + "\"]}]," +
@@ -77,8 +78,8 @@ public class BtcTransactionService {
     public Object txPush(String transaction) throws IOException {
         String txPushData =
                 "{\"tx\":" + transaction + "";
-        ResponseEntity<String> response
-                = restTemplate.postForEntity(blockCypherTestPush, txPushData, String.class);
+        ResponseEntity response
+                = restTemplate.postForEntity(blockCypherTestPush, txPushData, RestTemplate.class);
         return response;
     }
 
